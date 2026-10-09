@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#155eef">
+  <title>Lavanda Laundry — Bersih, Praktis, Terpercaya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#155eef;--navy:#102a56;--pale:#edf4ff;--ink:#172b4d}
+    *{box-sizing:border-box}body{font-family:'DM Sans',sans-serif;color:var(--ink);background:#f8faff}
+    .navbar{background:#fff;border-bottom:1px solid #e7edf7}.brand-mark{width:40px;height:40px;border-radius:13px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800}
+    .hero{background:linear-gradient(115deg,#eaf2ff 0%,#f8faff 65%);padding:76px 0 66px;overflow:hidden}
+    .hero h1{font-size:clamp(2.5rem,5vw,4.25rem);letter-spacing:-.055em;font-weight:800;line-height:1.06;color:var(--navy)}
+    .hero h1 span{color:var(--blue)}.eyebrow{color:var(--blue);font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+    .hero-art{background:#dce9ff;border-radius:40% 60% 55% 45%;min-height:280px;display:grid;place-items:center;position:relative}
+    .washer{width:190px;height:220px;background:#fff;border-radius:26px;box-shadow:0 22px 45px #155eef22;display:flex;align-items:center;justify-content:center;position:relative}
+    .washer:before{content:'';position:absolute;top:18px;left:20px;right:20px;height:28px;background:#edf4ff;border-radius:8px}
+    .washer:after{content:'';position:absolute;top:64px;width:125px;height:125px;border:12px solid #c6d9ff;border-radius:50%;background:linear-gradient(135deg,#4f8cff,#155eef)}
+    .washer-icon{position:relative;z-index:1;color:white;font-size:2rem;font-weight:800}
+    .float-note{position:absolute;background:#fff;padding:14px 18px;border-radius:16px;box-shadow:0 10px 30px #173c7418;font-weight:700}
+    .section-pad{padding:68px 0}.section-title{font-weight:800;letter-spacing:-.035em;color:var(--navy)}
+    .service-card{border:1px solid #e7edf7;border-radius:20px;background:#fff;padding:22px;height:100%;cursor:pointer;transition:.2s;position:relative}
+    .service-card:hover,.service-card.selected{border-color:var(--blue);box-shadow:0 12px 32px #155eef14;transform:translateY(-3px)}
+    .service-card.selected:after{content:'✓';position:absolute;right:16px;top:15px;background:var(--blue);color:#fff;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:.8rem}
+    .service-icon{width:48px;height:48px;border-radius:15px;background:var(--pale);display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px}
+    .price{font-size:1.25rem;font-weight:800;color:var(--blue)}.muted{color:#71809a}
+    .form-panel,.summary-panel{background:#fff;border:1px solid #e5ebf5;border-radius:24px;padding:clamp(20px,3vw,34px)}
+    .form-label{font-weight:700;font-size:.9rem}.form-control,.form-select{padding:12px 14px;border-radius:12px;border-color:#dce4f0}
+    .form-control:focus,.form-select:focus{border-color:var(--blue);box-shadow:0 0 0 .2rem #155eef18}
+    .btn-primary{background:var(--blue);border-color:var(--blue);border-radius:12px;padding:12px 20px;font-weight:700}.btn-primary:hover{background:#0f4bc2}
+    .total-box{background:var(--pale);padding:20px;border-radius:16px}.total-value{font-size:1.9rem;font-weight:800;color:var(--blue)}
+    .steps{display:flex;gap:14px;align-items:flex-start}.step-no{flex:0 0 40px;width:40px;height:40px;display:grid;place-items:center;background:var(--pale);color:var(--blue);border-radius:13px;font-weight:800}
+    footer{background:var(--navy);color:#d6e3ff;padding:32px 0}
+    @media(max-width:767px){.hero{padding:48px 0}.hero-art{min-height:240px;margin-top:20px}.section-pad{padding:48px 0}}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container"><a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#"><span class="brand-mark">L</span><span>Lavanda<span class="text-primary">Laundry</span></span></a>
+    <a href="#pesan" class="btn btn-primary btn-sm ms-auto">Pesan Laundry</a>
+  </div>
+</nav>
+<header class="hero"><div class="container"><div class="row align-items-center g-5">
+  <div class="col-lg-6"><div class="eyebrow mb-3">Laundry jadi lebih mudah</div><h1>Pakaian bersih,<br><span>hari lebih ringan.</span></h1>
+    <p class="lead muted mt-4 mb-4">Serahkan urusan cucian ke kami. Layanan praktis, harga jelas, dan proses pemesanan yang simpel.</p>
+    <a href="#layanan" class="btn btn-primary me-2">Lihat Layanan</a><a href="#pesan" class="btn btn-outline-primary rounded-3 px-4 py-3 fw-bold">Pesan Sekarang</a>
+    <div class="d-flex gap-4 mt-4 small muted"><span>✓ Harga transparan</span><span>✓ Pesan online</span></div>
+  </div>
+  <div class="col-lg-6"><div class="hero-art"><div class="washer"><span class="washer-icon">✦</span></div><div class="float-note" style="top:18%;left:0">🫧 Bersih maksimal</div><div class="float-note" style="bottom:12%;right:0">🧺 Tinggal pesan</div></div></div>
+</div></div></header>
+<section class="section-pad" id="layanan"><div class="container"><div class="text-center mb-5"><div class="eyebrow mb-2">Pilihan layanan</div><h2 class="section-title">Cucian apa yang ingin dibersihkan?</h2><p class="muted mb-0">Pilih layanan di bawah untuk mulai menghitung estimasi biaya.</p></div>
+  <div id="serviceList" class="row g-3"><div class="col-12 text-center muted py-4">Memuat layanan...</div></div>
+  <div id="serviceError" class="alert alert-warning d-none mt-3"></div>
+</div></section>
+<section class="section-pad pt-0" id="pesan"><div class="container"><div class="row g-4 align-items-start">
+  <div class="col-lg-7"><div class="form-panel"><div class="eyebrow mb-2">Form pemesanan</div><h2 class="section-title h3 mb-2">Pesan laundry kamu</h2><p class="muted mb-4">Isi data dengan benar agar admin mudah menghubungi kamu.</p>
+    <form id="orderForm">
+      <div class="row g-3">
+        <div class="col-md-6"><label class="form-label" for="customer_name">Nama lengkap</label><input class="form-control" id="customer_name" name="customer_name" required maxlength="160" placeholder="Nama kamu"></div>
+        <div class="col-md-6"><label class="form-label" for="customer_phone">No. WhatsApp</label><input class="form-control" id="customer_phone" name="customer_phone" required inputmode="tel" placeholder="08xxxxxxxxxx"></div>
+        <div class="col-md-7"><label class="form-label" for="service_id">Layanan laundry</label><select class="form-select" id="service_id" name="service_id" required><option value="">Pilih layanan</option></select></div>
+        <div class="col-md-5"><label class="form-label" for="qty">Jumlah / berat</label><div class="input-group"><input class="form-control" type="number" id="qty" name="qty" min="0.1" max="10000" step="0.1" value="1" required><span class="input-group-text" id="qtyUnit">unit</span></div></div>
+        <div class="col-md-6"><label class="form-label" for="pickup_method">Metode penyerahan</label><select class="form-select" id="pickup_method" name="pickup_method" required><option value="antar">Antar ke tempat laundry</option><option value="jemput">Jemput ke rumah</option></select></div>
+        <div class="col-md-6"><label class="form-label" for="delivery_method">Metode pengiriman</label><select class="form-select" id="delivery_method" name="delivery_method" required><option value="ambil">Ambil di tempat</option><option value="diantar">Diantar ke alamat</option></select></div>
+        <div class="col-12"><label class="form-label" for="address">Alamat lengkap</label><textarea class="form-control" id="address" name="address" rows="2" maxlength="1000" required placeholder="Alamat untuk penjemputan/pengantaran"></textarea></div>
+        <div class="col-12"><label class="form-label" for="notes">Catatan <span class="muted fw-normal">(opsional)</span></label><textarea class="form-control" id="notes" name="notes" rows="2" maxlength="2000" placeholder="Contoh: pakaian putih dipisah"></textarea></div>
+      </div>
+      <div id="formError" class="alert alert-danger d-none mt-3 mb-0"></div>
+      <button id="submitOrder" type="submit" class="btn btn-primary w-100 mt-4">Buat Pesanan <span class="ms-1">→</span></button>
+    </form>
+  </div></div>
+  <div class="col-lg-5"><div class="summary-panel sticky-lg-top" style="top:100px"><div class="eyebrow mb-2">Ringkasan</div><h3 class="section-title h4">Estimasi biaya</h3><div class="d-flex justify-content-between gap-3 py-3 border-bottom"><span class="muted">Layanan</span><strong id="summaryService">Belum dipilih</strong></div><div class="d-flex justify-content-between gap-3 py-3 border-bottom"><span class="muted">Harga satuan</span><strong id="summaryPrice">Rp0</strong></div><div class="d-flex justify-content-between gap-3 py-3 border-bottom"><span class="muted">Jumlah</span><strong id="summaryQty">1</strong></div><div class="total-box mt-4"><div class="muted small mb-1">Total estimasi</div><div class="total-value" id="summaryTotal">Rp0</div><div class="small muted mt-1">Total akhir dapat dikonfirmasi admin.</div></div><hr class="my-4"><div class="steps mb-3"><div class="step-no">1</div><div><strong>Pilih layanan</strong><div class="small muted">Tentukan jenis cucian dan jumlahnya.</div></div></div><div class="steps mb-3"><div class="step-no">2</div><div><strong>Isi data pesanan</strong><div class="small muted">Cantumkan nomor WA dan alamat aktif.</div></div></div><div class="steps"><div class="step-no">3</div><div><strong>Konfirmasi lewat WhatsApp</strong><div class="small muted">Admin akan membantu proses selanjutnya.</div></div></div></div></div>
+</div></div></section>
+<footer><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><div class="fw-bold text-white">Lavanda Laundry</div><div class="small">Bersih, praktis, dan siap membantu urusan cucianmu.</div><div class="small">© <span id="year"></span> Lavanda Laundry</div></div></footer>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 rounded-4"><div class="modal-body p-4 p-md-5 text-center"><div class="display-4 mb-3">🎉</div><h2 class="h3 fw-bold" id="successTitle">Pesanan berhasil dibuat!</h2><p class="muted">Simpan kode pesanan ini untuk memudahkan pengecekan.</p><div class="bg-light rounded-3 p-3 my-4"><div class="small muted">Kode pesanan</div><div class="fs-3 fw-bold text-primary" id="orderCode">LDY-XXXXXX</div></div><a id="adminWaLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-success w-100 py-3 fw-bold">Chat Admin WhatsApp</a><button type="button" class="btn btn-light w-100 mt-2" data-bs-dismiss="modal">Tutup</button></div></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(() => {
+  const rupiah = n => new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Number(n)||0);
+  const icons = ['🧺','⚡','👟','🛏️','🧼','🧸'];
+  let services = [];
+  const serviceList = document.getElementById('serviceList');
+  const serviceSelect = document.getElementById('service_id');
+  const qtyInput = document.getElementById('qty');
+  const formError = document.getElementById('formError');
+
+  async function loadServices() {
+    try {
+      const response = await fetch('/api/services');
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Gagal memuat layanan.');
+      services = data.services || [];
+      if (!services.length) throw new Error('Belum ada layanan aktif. Silakan hubungi admin.');
+      serviceList.innerHTML = '';
+      serviceSelect.innerHTML = '<option value="">Pilih layanan</option>';
+      services.forEach((service, index) => {
+        const col = document.createElement('div'); col.className = 'col-sm-6 col-lg-4';
+        const card = document.createElement('button'); card.type = 'button'; card.className = 'service-card text-start w-100';
+        card.dataset.id = service.id;
+        const icon = document.createElement('div'); icon.className = 'service-icon'; icon.textContent = icons[index % icons.length];
+        const name = document.createElement('h3'); name.className = 'h6 fw-bold mb-2'; name.textContent = service.name;
+        const desc = document.createElement('p'); desc.className = 'small muted mb-3'; desc.textContent = service.description || 'Layanan laundry untuk kebutuhan kamu.';
+        const price = document.createElement('div'); price.className = 'price'; price.textContent = rupiah(service.price);
+        const unit = document.createElement('span'); unit.className = 'small muted fw-normal'; unit.textContent = ' / ' + service.unit;
+        price.appendChild(unit); card.append(icon,name,desc,price);
+        card.addEventListener('click', () => { serviceSelect.value = String(service.id); updateEstimate(); document.getElementById('pesan').scrollIntoView({behavior:'smooth'}); });
+        col.appendChild(card); serviceList.appendChild(col);
+        const option = document.createElement('option'); option.value = service.id; option.textContent = `${service.name} — ${rupiah(service.price)}/${service.unit}`; serviceSelect.appendChild(option);
+      });
+      updateEstimate();
+    } catch (error) {
+      serviceList.innerHTML = '';
+      document.getElementById('serviceError').textContent = error.message;
+      document.getElementById('serviceError').classList.remove('d-none');
+    }
+  }
+
+  function updateEstimate() {
+    const selected = services.find(s => String(s.id) === serviceSelect.value);
+    document.querySelectorAll('.service-card').forEach(card => card.classList.toggle('selected', card.dataset.id === serviceSelect.value));
+    const qty = Number(qtyInput.value) || 0;
+    document.getElementById('qtyUnit').textContent = selected ? selected.unit : 'unit';
+    document.getElementById('summaryService').textContent = selected ? selected.name : 'Belum dipilih';
+    document.getElementById('summaryPrice').textContent = selected ? `${rupiah(selected.price)} / ${selected.unit}` : rupiah(0);
+    document.getElementById('summaryQty').textContent = selected ? `${qty || 0} ${selected.unit}` : String(qty || 0);
+    document.getElementById('summaryTotal').textContent = rupiah(selected ? Math.round(Number(selected.price) * qty) : 0);
+  }
+  serviceSelect.addEventListener('change', updateEstimate);
+  qtyInput.addEventListener('input', updateEstimate);
+  document.getElementById('pickup_method').addEventListener('change', e => {
+    if (e.target.value === 'jemput') document.getElementById('address').placeholder = 'Alamat lengkap untuk penjemputan dan/atau pengantaran';
+    else document.getElementById('address').placeholder = 'Alamat untuk penjemputan/pengantaran';
+  });
+  document.getElementById('orderForm').addEventListener('submit', async event => {
+    event.preventDefault(); formError.classList.add('d-none');
+    const button = document.getElementById('submitOrder'); button.disabled = true; button.textContent = 'Memproses pesanan...';
+    const form = new FormData(event.currentTarget);
+    const payload = Object.fromEntries(form.entries());
+    payload.service_id = Number(payload.service_id); payload.qty = Number(payload.qty);
+    try {
+      const response = await fetch('/api/orders', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Pesanan gagal dibuat.');
+      document.getElementById('orderCode').textContent = data.order.order_code;
+      const wa = document.getElementById('adminWaLink');
+      if (data.wa_link) { wa.href = data.wa_link; wa.classList.remove('d-none'); }
+      else { wa.href = '#'; wa.classList.add('d-none'); }
+      bootstrap.Modal.getOrCreateInstance(document.getElementById('successModal')).show();
+      event.currentTarget.reset(); qtyInput.value = 1; updateEstimate();
+    } catch (error) { formError.textContent = error.message; formError.classList.remove('d-none'); }
+    finally { button.disabled = false; button.innerHTML = 'Buat Pesanan <span class="ms-1">→</span>'; }
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  loadServices();
+})();
+</script>
+</body></html>
